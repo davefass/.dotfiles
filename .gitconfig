@@ -1,0 +1,11 @@
+[user]
+	name = davefass
+	email = davefass@users.noreply.github.com
+[pull]
+	rebase = false
+[credential]
+	helper = libsecret
+[core]
+	askPass = ksshaskpass
+[init]
+	defaultBranch = main
