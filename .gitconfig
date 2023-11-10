@@ -1,5 +1,5 @@
 [user]
-	name = davefass
+	name = Dave Fass
 	email = davefass@users.noreply.github.com
 [pull]
 	rebase = false
@@ -7,5 +7,7 @@
 	helper = libsecret
 [core]
 	askPass = ksshaskpass
+	editor = nano
+	excludesfile = /Users/dave/.dotfiles/.gitignore-global
 [init]
 	defaultBranch = main
