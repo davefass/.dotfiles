@@ -8,6 +8,6 @@
 [core]
 	askPass = ksshaskpass
 	editor = nano
-	excludesfile = /Users/dave/.dotfiles/.gitignore-global
+	excludesfile = ~/.dotfiles/.gitignore-global
 [init]
 	defaultBranch = main
