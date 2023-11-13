@@ -116,6 +116,8 @@ source $ZSH/oh-my-zsh.sh
 eval $(thefuck --alias fuck)
 
 # oh my posh
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ] && [[ $(uname) == "Darwin" ]]; then
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/dracula.omp.json)"
+else
+  eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/dracula.omp.json)"
 fi
