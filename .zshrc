@@ -117,4 +117,6 @@ alias up="sudo apt update && sudo apt full-upgrade"
 eval $(thefuck --alias fuck)
 
 # oh my posh
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/themes/dracula-transient.omp.json)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+   eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/themes/dracula-transient.omp.json)"
+fi
