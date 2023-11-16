@@ -79,7 +79,7 @@
   "transient_prompt": {
         "background": "transparent",
         "foreground": "#f1fa8c",
-        "template": " \u2665 {{ .Shell }}> "
+        "template": " \udb85\udc0b {{ .Shell }} > "
     },
   "final_space": true,
   "version": 2
