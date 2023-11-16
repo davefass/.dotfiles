@@ -1,15 +1,26 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "var": {
+    "path": "{{ .Path }}"
+  },
   "blocks": [
     {
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
+          "background": "#44475A",
           "foreground": "#f8f8f2",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "template": " {{ if .WSL }}WSL @ {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "#6272a4",
+          "foreground": "#f8f8f2",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \uf007 {{ .UserName }}@{{ .HostName }} ",
           "type": "session"
         },
         {
@@ -78,7 +89,7 @@
   ],
   "transient_prompt": {
         "background": "transparent",
-        "foreground": "#f1fa8c",
+        "foreground": "#50FA7B",
         "template": " \udb85\udc0b {{ .Shell }} > "
     },
   "final_space": true,
