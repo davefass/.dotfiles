@@ -102,9 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
-alias up="omz update && mas upgrade && brew update && brew upgrade"
+    alias up="omz update && echo '\n' && echo  Updating App Store apps && mas upgrade && echo '\n' && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
 else
-alias up="omz update && sudo apt update && sudo apt full-upgrade -y"
+    alias up="omz update && sudo apt update && sudo apt full-upgrade -y"
 fi
 
 # thefuck
