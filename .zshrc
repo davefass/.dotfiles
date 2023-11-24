@@ -101,7 +101,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [[ $(uname) == "Darwin" ]]; then
+alias up="mas upgrade && brew update && brew upgrade"
+else
 alias up="sudo apt update && sudo apt full-upgrade"
+fi
 
 # thefuck
 eval $(thefuck --alias fuck)
