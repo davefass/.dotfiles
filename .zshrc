@@ -31,7 +31,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -102,9 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
-    alias up="omz update && echo '\n' && echo  Updating App Store apps && mas upgrade && echo '\n' && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
+    alias up="echo  Updating App Store apps && mas upgrade && echo '\n' && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
 else
-    alias up="omz update && sudo apt update && sudo apt full-upgrade -y"
+    alias up="sudo apt update && sudo apt full-upgrade -y"
 fi
 
 # thefuck
