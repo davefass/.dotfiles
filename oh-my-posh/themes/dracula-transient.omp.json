@@ -28,10 +28,20 @@
           "foreground": "#f8f8f2",
           "powerline_symbol": "",
           "properties": {
-            "style": "folder"
+            "style": "agnoster_full",
+            "home_icon": "󰋜",
+            "folder_icon": "",
+            "folder_separator_icon": "",
+            "mapped_locations": {
+              "~/Dev": " dev",
+              "~/Downloads": " downloads",
+              "~/Movies": " movies",
+              "~/Music": " music",
+              "~/Pictures": " pictures"
+            }
           },
           "style": "powerline",
-          "template": "  {{ .Path }} ",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
