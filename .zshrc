@@ -72,7 +72,13 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gh git thefuck zsh-autosuggestions zsh-syntax-highlighting)
+if [[ $(uname) != "Darwin" ]]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    plugins=(gh git sudo thefuck)
+else
+    plugins=(gh git sudo thefuck zsh-autosuggestions zsh-syntax-highlighting)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,7 +111,9 @@ if [[ $(uname) == "Darwin" ]]; then
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 else
-    alias up="sudo apt update && sudo apt full-upgrade -y"
+    alias up="yay -Syu"
+    alias search="yay -Ss"
+    alias install="yay -S"
 fi
 
 # thefuck
