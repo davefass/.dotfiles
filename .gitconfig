@@ -3,10 +3,7 @@
 	email = davefass@users.noreply.github.com
 [pull]
 	rebase = false
-[credential]
-	helper = libsecret
 [core]
-	askPass = ksshaskpass
 	editor = nano
 	excludesfile = ~/.dotfiles/.gitignore-global
 [init]
