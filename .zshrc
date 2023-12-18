@@ -73,8 +73,8 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 if [[ $(uname) != "Darwin" ]]; then
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     plugins=(gh git sudo thefuck)
 else
     plugins=(gh git sudo thefuck zsh-autosuggestions zsh-syntax-highlighting)
@@ -117,6 +117,7 @@ else
 fi
 
 alias hs="hugo serve --disableFastRender"
+alias ts="tailscale"
 
 # thefuck
 eval $(thefuck --alias fuck)
