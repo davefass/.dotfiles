@@ -72,12 +72,14 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-if [[ $(uname) != "Darwin" ]]; then
+if [[ $(uname) == "Darwin" ]]; then
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     plugins=(gh git sudo thefuck)
 else
-    plugins=(gh git sudo thefuck zsh-autosuggestions zsh-syntax-highlighting)
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    plugins=(gh git sudo thefuck)
 fi
 
 source $ZSH/oh-my-zsh.sh
