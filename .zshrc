@@ -113,11 +113,11 @@ if [[ $(uname) == "Darwin" ]]; then
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 else
-    alias up="yay -Syu"
+    alias up="yay -Syu --noconfirm"
     alias search="yay -Ss"
-    alias install="yay -S"
-    alias remove="yay -Rns"
-    alias clean="yay -Yc"
+    alias install="yay -S --noconfirm"
+    alias remove="yay -Rns --noconfirm"
+    alias clean="yay -Yc --noconfirm"
 fi
 
 alias hs="hugo serve --disableFastRender"
