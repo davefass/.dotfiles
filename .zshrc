@@ -116,6 +116,8 @@ else
     alias up="yay -Syu"
     alias search="yay -Ss"
     alias install="yay -S"
+    alias remove="yay -Rns"
+    alias clean="yay -Yc"
 fi
 
 alias hs="hugo serve --disableFastRender"
