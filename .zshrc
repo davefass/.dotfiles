@@ -122,7 +122,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
-    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 else
     alias up="yay -Syu --noconfirm"
     alias search="yay -Ss"
