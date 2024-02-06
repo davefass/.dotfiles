@@ -4,6 +4,8 @@ my files what are dotted
 
 ## helpful links
 
+[dotfiles info & tutorials](https://dotfiles.github.io/)
+
 [oh my zsh](https://ohmyz.sh/)
 
 [oh my posh](https://ohmyposh.dev/)
