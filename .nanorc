@@ -1,1 +1,1 @@
-include /usr/share/nano/sh.nanorc
+include /opt/homebrew/Cellar/nano/7.2/share/nano/*.nanorc
