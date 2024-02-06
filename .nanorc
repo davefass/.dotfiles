@@ -1,1 +1,2 @@
-include /opt/homebrew/Cellar/nano/7.2/share/nano/*.nanorc
+include ~/.dotfiles/nano/*.nanorc
+include ~/.dotfiles/nano/extra/*.nanorc
