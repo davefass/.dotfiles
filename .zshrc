@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
-#  ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
 #fi
 
 # Add pre and post command flair
@@ -138,4 +138,4 @@ alias avif="magick mogrify -format avif"
 eval $(thefuck --alias fuck)
 
 # oh my posh
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/themes/dracula-transient.omp.json)"
+#eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/themes/dracula-transient.omp.json)"
