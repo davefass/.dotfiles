@@ -132,6 +132,7 @@ fi
 
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
+alias avif="magick mogrify -format avif"
 
 # thefuck
 eval $(thefuck --alias fuck)
