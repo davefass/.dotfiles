@@ -122,6 +122,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
+    alias tsfix="sudo /usr/local/bin/tailscaled install-system-daemon && tailscale up --ssh"
 else
     alias up="yay -Syu --noconfirm"
     alias search="yay -Ss"
