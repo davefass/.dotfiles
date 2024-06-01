@@ -12,17 +12,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 #fi
 
-# Add pre and post command flair
-#preexec() {
-#    echo "✨ go\n"
-#    # $2 resolves aliases
-#    echo "$ $1"
-#}
-#
-#precmd() {
-#    echo "\n✅ all good"
-#}
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -86,12 +75,12 @@ COMPLETION_WAITING_DOTS="true"
 if [[ $(uname) == "Darwin" ]]; then
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    plugins=(gh git sudo thefuck)
 else
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    plugins=(gh git sudo thefuck)
 fi
+
+plugins=(gh git sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,9 +123,3 @@ fi
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
 alias avif="magick mogrify -format avif"
-
-# thefuck
-eval $(thefuck --alias fuck)
-
-# oh my posh
-#eval "$(oh-my-posh init zsh --config ~/.dotfiles/oh-my-posh/themes/dracula-transient.omp.json)"
