@@ -110,16 +110,17 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
-    alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
     alias tsfix="sudo /usr/local/bin/tailscaled install-system-daemon && tailscale up --ssh"
+    alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
 else
-    alias up="yay -Syu --noconfirm"
-    alias search="yay -Ss"
-    alias install="yay -S --noconfirm"
-    alias remove="yay -Rns --noconfirm"
     alias clean="yay -Yc --noconfirm"
+    alias install="yay -S --noconfirm"
+    alias list="yay -Qe"
+    alias remove="yay -Rns --noconfirm"
+    alias search="yay -Ss"
+    alias up="yay -Syu --noconfirm"
 fi
 
+alias avif="magick mogrify -format avif"
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
-alias avif="magick mogrify -format avif"
