@@ -110,6 +110,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ $(uname) == "Darwin" ]]; then
+    alias 1111="cd /Users/dave/Applications/AUTOMATIC1111/stable-diffusion-webui/ && ./webui.sh"
     alias tsfix="sudo /usr/local/bin/tailscaled install-system-daemon && tailscale up --ssh"
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
 else
@@ -124,3 +125,4 @@ fi
 alias avif="magick mogrify -format avif"
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
+alias upllama="ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}"
