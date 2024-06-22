@@ -127,4 +127,16 @@ fi
 alias avif="magick mogrify -format avif"
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
-alias upllama="ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}"
+
+# wrap the ollama command, if the parameter is pull with no other parameters pull all models
+function ollama() {
+  if [[ $1 == "pull" ]] && [[ $# -eq 1 ]]; then
+    echo "pulling all models..."
+    ollama list | awk '$1 !~ /^registry.local/ {print $1}' | while read -r model; do
+      echo "Pulling $model"
+      ollama pull "$model"
+    done
+  else
+    command ollama "$@"
+  fi
+}
