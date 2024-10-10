@@ -124,9 +124,10 @@ else
     alias up="yay -Syu --noconfirm"
 fi
 
-alias avif="magick mogrify -format avif"
+alias avif="magick mogrify -monitor -format avif"
 alias hs="hugo serve --disableFastRender"
 alias ts="tailscale"
+alias jxl="magick mogrify -monitor -define preserve-timestamp=true -format jxl"
 
 # wrap the ollama command, if the parameter is pull with no other parameters pull all models
 function ollama() {
