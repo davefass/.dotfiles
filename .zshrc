@@ -80,7 +80,7 @@ else
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-plugins=(gh git sudo)
+plugins=(gh git sudo tailscale)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,10 +124,11 @@ else
     alias up="yay -Syu --noconfirm"
 fi
 
-alias avif="magick mogrify -monitor -format avif"
+alias avif="magick mogrify -monitor -define preserve-timestamp=true -format avif"
 alias hs="hugo serve --disableFastRender"
-alias ts="tailscale"
+alias ignore="cp ~/.dotfiles/.gitignore-hugo .gitignore"
 alias jxl="magick mogrify -monitor -define preserve-timestamp=true -format jxl"
+alias ts="tailscale"
 
 # wrap the ollama command, if the parameter is pull with no other parameters pull all models
 function ollama() {
