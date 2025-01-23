@@ -112,6 +112,8 @@ fi
 if [[ $(uname) == "Darwin" ]]; then
     alias 1111="cd /Users/dave/Applications/AUTOMATIC1111/stable-diffusion-webui/ && ./webui.sh"
     alias easysd="cd /Users/dave/Applications/easy-diffusion && ./start.sh"
+    alias pip="pip3"
+    alias python="python3"
     alias silly="cd /Users/dave/Applications/SillyTavern-Launcher && ./launcher.sh"
     alias tsfix="sudo /usr/local/bin/tailscaled install-system-daemon && tailscale up --ssh"
     alias up="echo  Updating App Store apps && mas upgrade && echo 🍺 Updating Homebrew apps && brew update && brew upgrade"
